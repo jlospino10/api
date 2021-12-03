@@ -4,12 +4,12 @@ namespace Restaurante.Models
     public class Cliente
     {
         public int id { get; set; }
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
        
-        public string Usuario { get; set; }
-        public string Password { get; set; }
-        public string Imagen { get; set; }
+        public string user { get; set; }
+        public string pass { get; set; }
+        public string imagen { get; set; }
 
     }
 }
