@@ -15,11 +15,11 @@ namespace Restaurante.Controllers
     //  api/Client
     [Route("api/[controller]")]
     [ApiController]
-    public class ReservasController : ControllerBase
+    public class PlatoController : ControllerBase
     {
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _env;
-        public ReservasController(IConfiguration configuration, IWebHostEnvironment env)
+        public PlatoController(IConfiguration configuration, IWebHostEnvironment env)
         {
             _configuration = configuration;
             _env = env;
@@ -31,9 +31,9 @@ namespace Restaurante.Controllers
         public JsonResult Get()
         {
             string query = @"
-                        select id,cliente,servicio, fecha
+                        select id,nombre,descripcion, imagen, restaurante_id
                         from 
-                        Reserva
+                        Plato
             ";
 
             DataTable table = new DataTable();
@@ -60,8 +60,8 @@ namespace Restaurante.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                        delete from Reserva 
-                        where id=@Reservaid;
+                        delete from Plato 
+                        where id=@id;
                         
             ";
 
@@ -73,7 +73,7 @@ namespace Restaurante.Controllers
                 mycon.Open();
                 using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
                 {
-                    myCommand.Parameters.AddWithValue("@Reservaid", id);
+                    myCommand.Parameters.AddWithValue("@id", id);
 
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
@@ -87,13 +87,13 @@ namespace Restaurante.Controllers
         }
         //MODIFICAR
         [HttpPut]
-        public JsonResult Put(Reservas reserva)
+        public JsonResult Put(Plato pla)
         {
             string query = @"
-                        update Reserva set 
-                        cliente =@Reservacliente,
-                        servicio =@Reservaservicio , fecha =@Reservafecha            
-                        where id =@Reservaid;
+                        update Plato set 
+                        nombre =@PlatoNombre,
+                        descripcion =@Platodescripcion , imagen =@PlatoImagen , restaurante_id=@restaurante_id                
+                        where id =@id;
                         
             ";
 
@@ -105,10 +105,14 @@ namespace Restaurante.Controllers
                 mycon.Open();
                 using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
                 {
-                    myCommand.Parameters.AddWithValue("@Reservaid", reserva.id);
-                    myCommand.Parameters.AddWithValue("@Reservacliente", reserva.cliente);
-                    myCommand.Parameters.AddWithValue("@Reservaservicio", reserva.servicio);
-                    myCommand.Parameters.AddWithValue("@Reservafecha", reserva.fecha); 
+                    myCommand.Parameters.AddWithValue("@id", pla.id);
+                    myCommand.Parameters.AddWithValue("@PlatoNombre", pla.nombre);
+                    myCommand.Parameters.AddWithValue("@Platodescripcion", pla.descripcion);
+                    
+
+                    myCommand.Parameters.AddWithValue("@PlatoImagen", pla.imagen);
+                    myCommand.Parameters.AddWithValue("@restaurante_id", pla.restaurante_id);
+                    
 
 
                     myReader = myCommand.ExecuteReader();
@@ -124,13 +128,13 @@ namespace Restaurante.Controllers
 
   //AÑEDIR
         [HttpPost]
-        public JsonResult Post(Models.Reservas reservas)
+        public JsonResult Post(Models.Plato pla)
         {
             string query = @"
-                        insert into Reserva
-                        (cliente,servicio, fecha) 
+                        insert into Plato 
+                        (nombre,descripcion,imagen, restaurante_id) 
                         values
-                         (@Reservacliente,@Reservaservicio,@Reservafecha);
+                         (@PlatoNombre,@Platodescripcion,@PlatoImagen, @restaurante_id) ;
                         
             ";
 
@@ -142,12 +146,15 @@ namespace Restaurante.Controllers
                 mycon.Open();
                 using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
                 { 
-                    myCommand.Parameters.AddWithValue("@Reservacliente", reservas.cliente);
-                    myCommand.Parameters.AddWithValue("@Reservaservicio", reservas.servicio);
-                    myCommand.Parameters.AddWithValue("@Reservafecha", reservas.fecha);
-                     
-
                     
+                    myCommand.Parameters.AddWithValue("@PlatoNombre", pla.nombre);
+                    myCommand.Parameters.AddWithValue("@Platodescripcion", pla.descripcion);
+                    
+
+                    myCommand.Parameters.AddWithValue("@PlatoImagen", pla.imagen);
+                    myCommand.Parameters.AddWithValue("@restaurante_id", pla.restaurante_id);
+                    
+
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
 
