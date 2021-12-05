@@ -31,7 +31,7 @@ namespace Restaurante.Controllers
         public JsonResult Get()
         {
             string query = @"
-                        select id,nombre,descripcion
+                        select id,nombre,descripcion, imagen
                         from 
                         Empleado
             ";
@@ -96,7 +96,8 @@ namespace Restaurante.Controllers
             string query = @"
                         update Empleado set 
                         nombre =@EmpleadoNombre,
-                        descripcion =@EmpleadoApellido                     
+                        descripcion =@EmpleadoApellido     
+                        imagen =@imagen                    
                         where id =@EmpleadoId;
                         
             ";
@@ -112,6 +113,7 @@ namespace Restaurante.Controllers
                     myCommand.Parameters.AddWithValue("@EmpleadoId", emp.id);
                     myCommand.Parameters.AddWithValue("@EmpleadoNombre", emp.nombre);
                     myCommand.Parameters.AddWithValue("@EmpleadoApellido", emp.apellido);
+                       myCommand.Parameters.AddWithValue("@imagen", emp.imagen);
 
 
                     myReader = myCommand.ExecuteReader();
@@ -131,9 +133,9 @@ namespace Restaurante.Controllers
         {
             string query = @"
                         insert into Empleado 
-                        (nombre,descripcion,restaurante_id) 
+                        (nombre,descripcion,restaurante_id, imagen) 
                         values
-                         (@EmpleadoNombre,@EmpleadoApellido,@restaurante_id) ;
+                         (@EmpleadoNombre,@EmpleadoApellido,@restaurante_id, @imagen) ;
                         
             ";
 
@@ -148,6 +150,7 @@ namespace Restaurante.Controllers
                     myCommand.Parameters.AddWithValue("@EmpleadoNombre", emp.nombre);
                     myCommand.Parameters.AddWithValue("@EmpleadoApellido", emp.apellido);
                     myCommand.Parameters.AddWithValue("@restaurante_id",1);
+                    myCommand.Parameters.AddWithValue("@imagen",emp.imagen);
                   
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
