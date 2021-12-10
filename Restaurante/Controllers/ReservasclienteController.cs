@@ -15,11 +15,11 @@ namespace Restaurante.Controllers
     //  api/Client
     [Route("api/[controller]")]
     [ApiController]
-    public class ReservasController : ControllerBase
+    public class ReservasclienteController : ControllerBase
     {
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _env;
-        public ReservasController(IConfiguration configuration, IWebHostEnvironment env)
+        public ReservasclienteController(IConfiguration configuration, IWebHostEnvironment env)
         {
             _configuration = configuration;
             _env = env;
@@ -27,13 +27,14 @@ namespace Restaurante.Controllers
 
 
         //CONSULTA
-        [HttpGet]
-        public JsonResult Get()
+         [HttpGet("{id}")]
+        public JsonResult Get(int id)
+     
         {
             string query = @"
                         select i.id,c.nombre, s.nombre, i.fecha
                         from 
-                        Reserva i join Cliente  c on i.cliente=c.id join Servicio s on i.servicio=s.id
+                        Reserva i join Cliente  c on i.cliente=c.id join Servicio s on i.servicio=s.id where i.cliente=@cliente
             ";
 
             DataTable table = new DataTable();
@@ -44,6 +45,7 @@ namespace Restaurante.Controllers
                 mycon.Open();
                 using (MySqlCommand myCommand = new MySqlCommand(query, mycon))
                 {
+                 myCommand.Parameters.AddWithValue("@cliente",id);
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
 
