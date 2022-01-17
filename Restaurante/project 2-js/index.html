@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>La Casita</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>  
+ 
+        
+        
+                <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html"><a href="index.html"><img src="assets/img/icon.png"><font color=white></a>La Casita</a></h1></font>
+          <font color= 	#ffcc00>    
+        <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Atención 24 horas</span></i></font>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+              <li><a class="nav-link scrollto active bi bi-house" href="index.html">Inicio</a></li>
+              <li><a class="nav-link scrollto bi bi-person-circle" href="informacion.html">¿Quienes somos?</a></li>
+              <li><a class="nav-link scrollto bi bi-receipt-cutoff" href="menu.html">Platos</a></li>
+              <li><a class="nav-link scrollto  bi bi-ui-checks-grid" href="servicios.html">Servicios</a></li>
+              <li><a class="nav-link scrolltobi bi-telephone-plus" href="contactenos.html">Contactanos</a></li>
+              <li><a class="nav-link scrollto bi bi-chat-dots-fill" href="index.html#testimonials">Testimonios</a></li> 
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+ 
+
+    </div>
+    <div class="sticky-container colored-icons">
+      <ul class="sticky">
+      <li>
+      <a href="https://www.facebook.com/" title="Conectar con Facebook" data-tag="Conectar con Facebook" target="_blank">
+        <i class="bi bi-facebook" style="font-size:35px;margin-left:-16px"></i></a>
+      </li>
+      <li>
+      <a href="https://www.youtube.com/" title="Conectar con pinterest" data-tag="Conectar con pinterest" target="_blank">
+        <i class="bi bi-youtube" style="font-size: 35px; margin-left: -16px;"></i></a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com/" title="Conectar con pinterest" data-tag="Conectar con pinterest" target="_blank">
+          <i class="bi bi-twitter" style="font-size: 35px; margin-left: -16px;"></i></a>
+        </li>
+       
+      </ul>
+      </div>
+
+
+
+<style>
+
+  .centrado{
+		display:block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	 
+
+    img.DiagonalRedonda {
+		border-top-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+        border:1px black solid;
+		background-color:white;
+        padding:10px;   
+		box-shadow: 0px 0px 50px 0px rgba(250, 164, 032, 0.8);
+    }
+  
+  .sticky-container{
+      padding:0px;
+      margin:0px;
+      position:fixed;
+      right:25px;
+      top:100px;
+      width:25px;
+      z-index: 100;
+  }
+  .sticky li{    border-radius: 8px; margin-top: 2px;list-style-type:none;background-color:#fff;color:#efefef;height:38px;padding:0px;margin:0px 0px 2px 0px;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out;cursor:pointer;}
+  .sticky li:hover{ margin-left:45px;}
+  .sticky li img{ float:left;}
+  .sticky li p{padding-top:5px;margin:0px;line-height:16px;font-size:small;display: inline-block;}
+  .sticky li p a{text-decoration:none;color:#2C3539;}
+  .sticky li p a:hover{ text-decoration:underline;}
+   
+  .colored-icons .bi-facebook, .bi-facebook:hover{ color:#3b5998; }
+  .colored-icons .bi-twitter, .bi-twitter:hover{ color:#1da1f2; }
+   
+  .colored-icons .bi-youtube, .bi-youtube:hover{ color:#d30606; }
+   
+  </style>
+  
+   </header><!-- End Header -->
+     <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background: url(assets/img/slide/slide-1.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"><span>La Casita</span> sabe a hogar, 35% desc.</h2>
+         <div>
+                  <a  class="" ><font color= white>APROVECHA NUESTRO DESCUENTO EN TODOS NUESTROS PLATOS <br> VALIDO SOLO HASTA EL 4 DE OCTUBRE, PILAS ! <br><br></font></a>
+                </div>
+                <div>
+                  <a href="menu.html" class="btn-menu animate__animated animate__fadeInUp scrollto"><i class="bi bi-calendar2-check"></i> <td>Reservate Aqui</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background: url(assets/img/slide/slide-2.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Especialidades de la casa</h2>
+            <div>
+                  <a  class="" ><font color= white> PLATOS MAS EXOTICOS E INIGUALABLES <br><br><br></font></a>
+                </div>
+                <div>
+                  <a href="menu.html" class="btn-menu animate__animated animate__fadeInUp scrollto">Especialidades</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background: url(assets/img/slide/slide-3.jpg);">
+            <div class="carousel-background"><img src="assets/img/slide/slide-3.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Organizamos tus eventos</h2>
+                <div>
+                  <a  class="" ><font color= white>TE BRINDAMOS LA MEJOR ATENCION Y UNA DIGUSTACION IRREPETIBLE<br><br></font></a>
+                </div>
+                <div>
+                  <a href="menu.html" class="btn-menu animate__animated animate__fadeInUp scrollto">RESERVACION DE EVENTOS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+   <section id="contact" class="section-bg">
+            <div class="container" data-aos="fade-up">
+      
+          <div class="section-title">
+        <h2>Organizamos<span>tus eventos, <3 </span></h2>
+     <p>Tenemos una variedad de servicios contamos con los mejores profesionales en culinario y decoracion. <br> Elige, nosotros nos encargamos del resto  <i class="bi bi-heart-fill"></i></p> <br><br>
+              
+                  
+              <div class="row contact-info">
+            <nav id="navbar" class="navbar order-last order-lg-0">
+          
+            
+              <a class="nav-link active" data-bs-toggle="tab" href="#tab-2"><img src="assets/img/2.png" width="30" height="30" > <b>ANIVERSARIO </b></a>
+    
+             
+              <a class="nav-link active" data-bs-toggle="tab" href="#tab-3"><img src="assets/img/nina.png" width="40" height="40" > <b>FIESTAS INFANTILES</b></a>
+           
+            
+              <a class="nav-link active" data-bs-toggle="tab" href="#tab-4"><img src="assets/img/propuesta.png" width="34" height="34" ><b> DECLARACION / PROPUESTA</b></a>
+           
+            
+           
+             
+      </nav>
+      <br> <br><br> <br>
+       <div> <br>
+                  <a href="servicios.html" class="btn-menu animate__animated animate__fadeInUp scrollto"><br><br><i class="bi bi-plus-square"></i> Ver mas servicios</a>
+                </div>
+      
+              </div>
+
+            </p>
+            
+      </header>
+
+</section><!-- End Hero Section -->
+ 
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
+    <div class="container-fluid">
+
+      <div class="section-title">
+        <h2>Algunas fotos de <span>Nuestro Restaurante</span></h2>
+        <p>Disponemos de multiples sedes a nivel nacional, estamos mas cerca de ti. </p>
+      </div>
+
+      <div class="row no-gutters">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+            </a>
+                 <center> <p><i class="bi bi-geo-alt-fill"></i> BOGOTA, CLL 44 AV 23 AB</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> CALI, CLL 34 AV 3 B</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> MAICAO, CLL 14 CRA 23</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> BARRANQUILLA, CLL 44 CRA 1 B</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> MEDELLIN, CLL 5C AV 83 AB</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> BUCARAMANGA, CLL 21 AV 7 A</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> PAMPLONA, CLL 4 CRA 13 B</p></center>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+              <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+            </a>
+              <center> <p><i class="bi bi-geo-alt-fill"></i> TOLIMA, CLL 102 AV 3 AB</p></center>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
+  <!-- ======= Specials Section ======= -->
+  <section id="specials" class="specials">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Los Recomendados <span>del Chef</span></h2>
+     <p>Tenemos los recomendados de esta semana, elige tu favorita <i class="bi bi-heart-fill"></i></p> <br><br>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <ul class="nav nav-tabs flex-column">
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Especial 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Especial 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Especial 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Especial 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Especial 5</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9 mt-4 mt-lg-0">
+          <div class="tab-content">
+            <div class="tab-pane active show" id="tab-1">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>Bibimbap vegano con tofu y arroz</h3>
+                  ¿No sabes que es un bibimbap? <br> Es uno de los platos más representativos de la gastronomía coreana. <br><br> Pura tendencia, Consiste en un bol de arroz blanco cubierto de un mix de verduras.
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/specials-1.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-2">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>Gnocchettis de garbanzo con kiwi, naranja y calabacín</h3>
+                                <br>proponemos una receta deliciosa de gnocchetti de cúrcuma <br>
+                                 -¡sin gluten!- con diferentes tipos de kiwi, naranjas, calabacin y uvas. <br><br> ¿Sabías que la naranja aporta numerosos beneficios para tu salud?
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/specials-2.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-3">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>espaguetis con kale, pasas y salsa de tahín</h3>
+                  Si te encanta la pasta, pero te aburres de comerla siempre de la misma manera, te vamos a proponer una salsa diferente a la vez que muy nutritiva. 
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/specials-3.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-4">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>super tris paella vegetal</h3>
+                 Pocas recetas hay más canónicas que la paella.<br><br> No se trata solamente del método de preparación, sino también de los ingredientes utilizados. 
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/specials-4.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-5">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>postre de banano,uvas y papaya</h3>
+                Disfruta de una deliciosa y nutritiva reseta <br>
+                Esta elaborada con las mejores frutas, nutrientes y aderezos exoticos.
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/specials-5.jpg" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Specials Section -->
+
+ 
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container position-relative">
+      
+              <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+      
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                      <h3>Jorge Luis </h3>
+                      <h4>Cliente</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Excelente servicio, buena atencion y todo muy organizado
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div><!-- End testimonial item -->
+      
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                      <h3>Diani Luz</h3>
+                      <h4>Cliente</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Fue una experiencia maravillosa, 100% recomendado.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div><!-- End testimonial item -->
+      
+                    
+          </section><!-- End Testimonials Section -->
+
+     
+  <footer id="footer">
+    <div class="container">
+      <h3>La Casita</h3>
+      
+       
+      
+      <div class="social-links">
+      
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        
+      </div>
+       <a href="" class="btn btn-outline-warning btn-sm btn-rounded" data-bs-toggle="modal" data-bs-target="#modalForm1"> <span><i class="bi bi-geo-alt-fill"></i> Maps</span></a>  &nbsp; <a href="portafolio.html" class="btn btn-outline-warning btn-sm btn-rounded"  > <span><i class="bi bi-diagram-3-fill"></i> Directorio </span></a> <br><br>  
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalForm1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+         <div class="contenedor-lista">
+                     
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.5164107565!2d-74.2478938043006!3d4.648283717342738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1631858141217!5m2!1ses!2sco" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                     
+    </div>
+    <script src="Mapa/js/jquery.js"></script>
+    <script src="Mapa/js/script.js"></script>
+ 
+                    </div>
+                </div>
+            </div>
+        <strong><span>Bogota, Colombia <br> <font color= #ffcc00> <a href="mailto:Restaurante@lacasita.com">Restaurante@lacasita.com</a></font><br>+57 300 123 45 67 <td> <a href="https://api.whatsapp.com/send?phone=+573128420188"> <button type="button" class="btn btn-outline-success"><i class="bi bi-whatsapp"></i></button></a></span></strong>
+      <div class="copyright">
+        &copy; Copyright <BR>Todos los dereschos reservados.
+      </div>
+  
+    </div> 
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
